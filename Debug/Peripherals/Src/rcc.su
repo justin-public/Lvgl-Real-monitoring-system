@@ -1,0 +1,2 @@
+../Peripherals/Src/rcc.c:15:16:rcc_get_pllp	16	static
+../Peripherals/Src/rcc.c:41:13:rcc_pll_config	24	static

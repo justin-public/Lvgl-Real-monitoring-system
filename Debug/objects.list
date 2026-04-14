@@ -12,4 +12,5 @@
 "./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
 "./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o"
 "./Peripherals/Src/flash.o"
+"./Peripherals/Src/rcc.o"
 "./Startup/startup_stm32f407igtx.o"
