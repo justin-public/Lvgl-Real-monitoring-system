@@ -3,6 +3,7 @@
  * Application 진입 지점
  */
 #include "mcu.h"
+#include "rcc.h"
 #include "FreeRTOSConfig.h"
 #include "FreeRTOSTasks.h"
 

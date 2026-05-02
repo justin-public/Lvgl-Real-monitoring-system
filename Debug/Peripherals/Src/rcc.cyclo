@@ -1,2 +1,16 @@
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:170:20:rcc_hse_enable	2
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:181:20:rcc_hsi_disable	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:193:20:rcc_pll_source	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:203:24:rcc_sysclk_get_source	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:211:20:rcc_pll_enable	2
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:232:20:rcc_ahb_set_prescaler	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:246:20:rcc_sysclk_set_source	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:261:20:rcc_apb1_set_prescaler	1
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:276:20:rcc_apb2_set_prescaler	1
 ../Peripherals/Src/rcc.c:15:16:rcc_get_pllp	4
 ../Peripherals/Src/rcc.c:41:13:rcc_pll_config	2
+../Peripherals/Src/rcc.c:69:6:rcc_init	2
+../Peripherals/Src/rcc.c:101:10:rcc_get_sysclk_freq	6
+../Peripherals/Src/rcc.c:144:10:rcc_get_hclk_freq	2
+../Peripherals/Src/rcc.c:162:10:rcc_get_pclk1_freq	2
+../Peripherals/Src/rcc.c:180:10:rcc_get_pclk2_freq	2

@@ -8,6 +8,7 @@ Core/Src/main.o: ../Core/Src/main.c \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/CMSIS/cmsis_gcc.h \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/CMSIS/mpu_armv7.h \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/Core/Inc/system_stm32f4xx.h \
+ C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/Config/FreeRTOSConfig.h \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/Config/FreeRTOSTasks.h \
  C:/Dev/stm32_rtos_project/workspace/RTOS-407/Middleware/ThirdParty/FreeRTOS/Source/include/FreeRTOS.h \
@@ -27,6 +28,7 @@ C:/Dev/stm32_rtos_project/workspace/RTOS-407/CMSIS/cmsis_compiler.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/CMSIS/cmsis_gcc.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/CMSIS/mpu_armv7.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/Core/Inc/system_stm32f4xx.h:
+C:/Dev/stm32_rtos_project/workspace/RTOS-407/Peripherals/Inc/rcc.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/Config/FreeRTOSConfig.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/Config/FreeRTOSTasks.h:
 C:/Dev/stm32_rtos_project/workspace/RTOS-407/Middleware/ThirdParty/FreeRTOS/Source/include/FreeRTOS.h:

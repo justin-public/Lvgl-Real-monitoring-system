@@ -66,35 +66,131 @@ static void rcc_pll_config(uint8_t sysclk_freq_mhz)
   RCC->PLLCFGR |= PLLP << RCC_PLLCFGR_PLLP_Pos;
 }
 
+void rcc_init(void)
+{
+  // RCC 초기화
+  // 시스템 클록 주파수를 설정하고, 웨이트 스테이트를 구성하고,
+  // HSE를 활성화 하고, PLL을 시스템 클록 소스로 구성하고,
+  // HSI를 비활성화하기 전에 PLL 클럭이 안정화될 때까지 대기하고, 클록 프리스케일러를 설정 합니다.
+  uint8_t sysclk_freq_mhz = RCC_MAX_SYSCLK_MHZ;
 
+  // 1. 플래시 웨이트 스테이트를 구성합니다. (sysclk_freq_mhz --> AHB 분주비 1 사용)
+  flash_config_wait_states(sysclk_freq_mhz);
 
+  rcc_hse_enable();
 
+  rcc_pll_source(RCC_PLL_SRC_HSE);
 
+  // PLL 파라미터를 계산하여 원하는 시스템 클록 주파수를 설정
+  rcc_pll_config(sysclk_freq_mhz);
 
+  rcc_pll_enable();
 
+  rcc_ahb_set_prescaler(RCC_SYSCLK_DIV_1);
 
+  rcc_sysclk_set_source(RCC_SYSCLK_SRC_PLLP);
 
+  while(RCC_CFGR_SWS_PLL != rcc_sysclk_get_source());
 
+  rcc_hsi_disable();
 
+  rcc_apb1_set_prescaler(RCC_APB1_DIV_4);
+  rcc_apb2_set_prescaler(RCC_APB2_DIV_2);
+}
 
+uint32_t rcc_get_sysclk_freq(void)
+{
+  uint32_t pllm = 0U, pllvco = 0U, pllp = 0U;
+  uint32_t sysclck_freq = 0u;
 
+  switch (RCC->CFGR & RCC_CFGR_SWS)
+  {
+    case RCC_CFGR_SWS_HSI:
+      sysclck_freq = RCC_HSI_FREQ;    /* HSI used as system clock source */
+      break;
 
+    case RCC_CFGR_SWS_HSE:
+      sysclck_freq = RCC_HSE_FREQ;    /* HSE used as system clock  source */
+      break;
 
+    case RCC_CFGR_SWS_PLL:            /* PLL used as system clock  source */
+      // PLL_VCO = (HSE_VALUE or HSI_VALUE / PLLM) * PLLN
+      // SYSCLK  = PLL_VCO / PLLP
+      pllm = RCC->PLLCFGR & RCC_PLLCFGR_PLLM;
 
+      if (RCC_GET_PLL_OSCSOURCE() != RCC_PLLCFGR_PLLSRC_HSI)
+      {
+        /* HSE used as PLL clock source */
+        pllvco = (uint32_t) ((((uint64_t) RCC_HSE_FREQ * ((uint64_t) ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos)))) / (uint64_t) pllm);
+      }
+      else
+      {
+        /* HSI used as PLL clock source */
+        pllvco = (uint32_t) ((((uint64_t) RCC_HSI_FREQ *((uint64_t) ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos)))) / (uint64_t) pllm);
+      }
+      pllp = ((((RCC->PLLCFGR & RCC_PLLCFGR_PLLP) >> RCC_PLLCFGR_PLLP_Pos) + 1U) * 2U);
 
+      sysclck_freq = pllvco / pllp;
+      break;
 
+    default:
+      sysclck_freq = RCC_HSI_FREQ;
+      break;
+  }
 
+  return sysclck_freq;
+}
 
+uint32_t rcc_get_hclk_freq(void)
+{
+  uint32_t sysclk = rcc_get_sysclk_freq();
+  uint32_t hclk_div = RCC_GET_HCLK_DIV();
 
+  /* Interpret hclk_div as actual divisor */
+  if (hclk_div >= 8)
+  {
+    hclk_div = 1 << (hclk_div - 7);
+  }
+  else
+  {
+      hclk_div = 1; // prescaler is 1
+  }
 
+  return sysclk / hclk_div;
+}
 
+uint32_t rcc_get_pclk1_freq(void)
+{
+  uint32_t hclk = rcc_get_hclk_freq();
+  uint32_t pclk1_div = RCC_GET_PCLK1_DIV();
 
+  /* Interpret pclk1_div as actual divisor */
+  if (pclk1_div >= 4)
+  {
+    pclk1_div = 1 << (pclk1_div - 3);
+  }
+  else
+  {
+    pclk1_div = 1;
+  }
 
+  return hclk / pclk1_div;
+}
 
+uint32_t rcc_get_pclk2_freq(void)
+{
+  uint32_t hclk = rcc_get_hclk_freq();
+  uint32_t pclk2_div = RCC_GET_PCLK2_DIV();
 
+  /* Interpret pclk2_div as actual divisor */
+  if (pclk2_div >= 4)
+  {
+    pclk2_div = 1 << (pclk2_div - 3);
+  }
+  else
+  {
+    pclk2_div = 1;
+  }
 
-
-
-
-
-
+  return hclk / pclk2_div;
+}

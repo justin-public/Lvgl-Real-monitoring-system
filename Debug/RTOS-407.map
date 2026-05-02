@@ -40,6 +40,12 @@ C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externalt
                               C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o) (_fflush_r)
 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
                               C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
+C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                              ./Peripherals/Src/rcc.o (__aeabi_uldivmod)
+C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                              C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                              C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
 
 Discarded input sections
 
@@ -55,6 +61,8 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x00000000       0x20 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .group         0x00000000        0xc ./Core/Src/main.o
+ .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
@@ -1363,16 +1371,44 @@ Discarded input sections
  .text          0x00000000        0x0 ./Peripherals/Src/rcc.o
  .data          0x00000000        0x0 ./Peripherals/Src/rcc.o
  .bss           0x00000000        0x0 ./Peripherals/Src/rcc.o
+ .text.rcc_hse_enable
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_hsi_disable
+                0x00000000       0x20 ./Peripherals/Src/rcc.o
+ .text.rcc_pll_source
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_sysclk_get_source
+                0x00000000       0x1c ./Peripherals/Src/rcc.o
+ .text.rcc_pll_enable
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_ahb_set_prescaler
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_sysclk_set_source
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_apb1_set_prescaler
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
+ .text.rcc_apb2_set_prescaler
+                0x00000000       0x30 ./Peripherals/Src/rcc.o
  .text.rcc_get_pllp
                 0x00000000       0x48 ./Peripherals/Src/rcc.o
  .text.rcc_pll_config
                 0x00000000       0xa0 ./Peripherals/Src/rcc.o
- .debug_info    0x00000000      0x2c1 ./Peripherals/Src/rcc.o
- .debug_abbrev  0x00000000       0xee ./Peripherals/Src/rcc.o
+ .text.rcc_init
+                0x00000000       0x5e ./Peripherals/Src/rcc.o
+ .text.rcc_get_sysclk_freq
+                0x00000000      0x20c ./Peripherals/Src/rcc.o
+ .text.rcc_get_hclk_freq
+                0x00000000       0x44 ./Peripherals/Src/rcc.o
+ .text.rcc_get_pclk1_freq
+                0x00000000       0x44 ./Peripherals/Src/rcc.o
+ .text.rcc_get_pclk2_freq
+                0x00000000       0x44 ./Peripherals/Src/rcc.o
+ .debug_info    0x00000000      0x500 ./Peripherals/Src/rcc.o
+ .debug_abbrev  0x00000000      0x1c0 ./Peripherals/Src/rcc.o
  .debug_aranges
-                0x00000000       0x28 ./Peripherals/Src/rcc.o
+                0x00000000       0x98 ./Peripherals/Src/rcc.o
  .debug_rnglists
-                0x00000000       0x1a ./Peripherals/Src/rcc.o
+                0x00000000       0x6f ./Peripherals/Src/rcc.o
  .debug_macro   0x00000000       0xfa ./Peripherals/Src/rcc.o
  .debug_macro   0x00000000      0xad2 ./Peripherals/Src/rcc.o
  .debug_macro   0x00000000       0x22 ./Peripherals/Src/rcc.o
@@ -1392,10 +1428,10 @@ Discarded input sections
  .debug_macro   0x00000000    0x15e97 ./Peripherals/Src/rcc.o
  .debug_macro   0x00000000       0x6d ./Peripherals/Src/rcc.o
  .debug_macro   0x00000000       0xd8 ./Peripherals/Src/rcc.o
- .debug_line    0x00000000      0x623 ./Peripherals/Src/rcc.o
- .debug_str     0x00000000    0x88b1e ./Peripherals/Src/rcc.o
+ .debug_line    0x00000000      0x8c4 ./Peripherals/Src/rcc.o
+ .debug_str     0x00000000    0x88cac ./Peripherals/Src/rcc.o
  .comment       0x00000000       0x44 ./Peripherals/Src/rcc.o
- .debug_frame   0x00000000       0x58 ./Peripherals/Src/rcc.o
+ .debug_frame   0x00000000      0x23c ./Peripherals/Src/rcc.o
  .ARM.attributes
                 0x00000000       0x34 ./Peripherals/Src/rcc.o
  .text          0x00000000       0x14 ./Startup/startup_stm32f407igtx.o
@@ -1621,6 +1657,25 @@ Discarded input sections
  .debug_frame   0x00000000       0x2c C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
  .ARM.attributes
                 0x00000000       0x34 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
+ .text          0x00000000       0x30 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000000       0x2c C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000       0x22 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000      0x2f8 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00000000        0x8 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000000       0x34 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000000       0x34 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .text          0x00000000        0x4 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000       0x22 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
  .data          0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
  .bss           0x00000000        0x0 C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
@@ -2183,61 +2238,63 @@ LOAD C:/ST/STM32CubeIDE_2.1.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_rnglists
                 0x000002d0       0x19 ./Startup/startup_stm32f407igtx.o
 
-.debug_macro    0x00000000    0x1a447
- .debug_macro   0x00000000      0x15e ./Core/Src/main.o
- .debug_macro   0x0000015e      0xad2 ./Core/Src/main.o
- .debug_macro   0x00000c30       0x2e ./Core/Src/main.o
- .debug_macro   0x00000c5e       0x2f ./Core/Src/main.o
- .debug_macro   0x00000c8d       0x22 ./Core/Src/main.o
- .debug_macro   0x00000caf       0x8e ./Core/Src/main.o
- .debug_macro   0x00000d3d       0x51 ./Core/Src/main.o
- .debug_macro   0x00000d8e      0x103 ./Core/Src/main.o
- .debug_macro   0x00000e91       0x6a ./Core/Src/main.o
- .debug_macro   0x00000efb      0x1df ./Core/Src/main.o
- .debug_macro   0x000010da       0x1c ./Core/Src/main.o
- .debug_macro   0x000010f6       0x22 ./Core/Src/main.o
- .debug_macro   0x00001118       0xfb ./Core/Src/main.o
- .debug_macro   0x00001213     0x1011 ./Core/Src/main.o
- .debug_macro   0x00002224      0x11f ./Core/Src/main.o
- .debug_macro   0x00002343    0x15e97 ./Core/Src/main.o
- .debug_macro   0x000181da       0x6d ./Core/Src/main.o
- .debug_macro   0x00018247      0x127 ./Core/Src/main.o
- .debug_macro   0x0001836e      0x190 ./Core/Src/main.o
- .debug_macro   0x000184fe       0x2e ./Core/Src/main.o
- .debug_macro   0x0001852c      0x182 ./Core/Src/main.o
- .debug_macro   0x000186ae       0xee ./Core/Src/main.o
- .debug_macro   0x0001879c       0x2e ./Core/Src/main.o
- .debug_macro   0x000187ca       0x1f ./Core/Src/main.o
- .debug_macro   0x000187e9       0x12 ./Core/Src/main.o
- .debug_macro   0x000187fb     0x10cc ./Core/Src/main.o
- .debug_macro   0x000198c7       0xc3 ./Core/Src/main.o
- .debug_macro   0x0001998a      0x14f ./Core/Src/main.o
- .debug_macro   0x00019ad9       0x10 ./Core/Src/main.o
- .debug_macro   0x00019ae9       0xe0 ./Core/Src/system_stm32f4xx.o
- .debug_macro   0x00019bc9      0x1a2 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
- .debug_macro   0x00019d6b      0x2bf ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
- .debug_macro   0x0001a02a       0x17 ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
- .debug_macro   0x0001a041      0x1cf ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_macro   0x0001a210      0x237 ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
+.debug_macro    0x00000000    0x1a559
+ .debug_macro   0x00000000      0x176 ./Core/Src/main.o
+ .debug_macro   0x00000176      0xad2 ./Core/Src/main.o
+ .debug_macro   0x00000c48       0x2e ./Core/Src/main.o
+ .debug_macro   0x00000c76       0x2f ./Core/Src/main.o
+ .debug_macro   0x00000ca5       0x22 ./Core/Src/main.o
+ .debug_macro   0x00000cc7       0x8e ./Core/Src/main.o
+ .debug_macro   0x00000d55       0x51 ./Core/Src/main.o
+ .debug_macro   0x00000da6      0x103 ./Core/Src/main.o
+ .debug_macro   0x00000ea9       0x6a ./Core/Src/main.o
+ .debug_macro   0x00000f13      0x1df ./Core/Src/main.o
+ .debug_macro   0x000010f2       0x1c ./Core/Src/main.o
+ .debug_macro   0x0000110e       0x22 ./Core/Src/main.o
+ .debug_macro   0x00001130       0xfb ./Core/Src/main.o
+ .debug_macro   0x0000122b     0x1011 ./Core/Src/main.o
+ .debug_macro   0x0000223c      0x11f ./Core/Src/main.o
+ .debug_macro   0x0000235b    0x15e97 ./Core/Src/main.o
+ .debug_macro   0x000181f2       0x6d ./Core/Src/main.o
+ .debug_macro   0x0001825f       0x22 ./Core/Src/main.o
+ .debug_macro   0x00018281       0xd8 ./Core/Src/main.o
+ .debug_macro   0x00018359      0x127 ./Core/Src/main.o
+ .debug_macro   0x00018480      0x190 ./Core/Src/main.o
+ .debug_macro   0x00018610       0x2e ./Core/Src/main.o
+ .debug_macro   0x0001863e      0x182 ./Core/Src/main.o
+ .debug_macro   0x000187c0       0xee ./Core/Src/main.o
+ .debug_macro   0x000188ae       0x2e ./Core/Src/main.o
+ .debug_macro   0x000188dc       0x1f ./Core/Src/main.o
+ .debug_macro   0x000188fb       0x12 ./Core/Src/main.o
+ .debug_macro   0x0001890d     0x10cc ./Core/Src/main.o
+ .debug_macro   0x000199d9       0xc3 ./Core/Src/main.o
+ .debug_macro   0x00019a9c      0x14f ./Core/Src/main.o
+ .debug_macro   0x00019beb       0x10 ./Core/Src/main.o
+ .debug_macro   0x00019bfb       0xe0 ./Core/Src/system_stm32f4xx.o
+ .debug_macro   0x00019cdb      0x1a2 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
+ .debug_macro   0x00019e7d      0x2bf ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
+ .debug_macro   0x0001a13c       0x17 ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
+ .debug_macro   0x0001a153      0x1cf ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_macro   0x0001a322      0x237 ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
 
-.debug_line     0x00000000     0x49fa
- .debug_line    0x00000000      0x6f8 ./Core/Src/main.o
- .debug_line    0x000006f8      0x5c4 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00000cbc      0x816 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
- .debug_line    0x000014d2     0x1feb ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
- .debug_line    0x000034bd      0x923 ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x00003de0      0xb9f ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x0000497f       0x7b ./Startup/startup_stm32f407igtx.o
+.debug_line     0x00000000     0x4a4d
+ .debug_line    0x00000000      0x74b ./Core/Src/main.o
+ .debug_line    0x0000074b      0x5c4 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00000d0f      0x816 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
+ .debug_line    0x00001525     0x1feb ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
+ .debug_line    0x00003510      0x923 ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x00003e33      0xb9f ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_line    0x000049d2       0x7b ./Startup/startup_stm32f407igtx.o
 
-.debug_str      0x00000000    0x999ed
- .debug_str     0x00000000    0x999ed ./Core/Src/main.o
-                              0x9335a (size before relaxing)
- .debug_str     0x000999ed    0x88611 ./Core/Src/system_stm32f4xx.o
- .debug_str     0x000999ed    0x10b00 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
- .debug_str     0x000999ed    0x14325 ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
- .debug_str     0x000999ed     0xf614 ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_str     0x000999ed    0x12657 ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_str     0x000999ed       0x72 ./Startup/startup_stm32f407igtx.o
+.debug_str      0x00000000    0x99f9d
+ .debug_str     0x00000000    0x99f9d ./Core/Src/main.o
+                              0x9390a (size before relaxing)
+ .debug_str     0x00099f9d    0x88611 ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x00099f9d    0x10b00 ./Middleware/ThirdParty/FreeRTOS/Source/list.o
+ .debug_str     0x00099f9d    0x14325 ./Middleware/ThirdParty/FreeRTOS/Source/tasks.o
+ .debug_str     0x00099f9d     0xf614 ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_str     0x00099f9d    0x12657 ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_str     0x00099f9d       0x72 ./Startup/startup_stm32f407igtx.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Core/Src/main.o
